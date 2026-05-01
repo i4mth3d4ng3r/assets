@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "fonts/Oswald.ttf"
+FONT_PATH = "arial.ttf" # Using standard bold sans-serif
 
 # ======================
 # TMDB FUNCTIONS
@@ -71,7 +71,7 @@ def feather_edges(subject):
 
 def enhance_contrast(img):
     img_np = np.array(img)
-    img_np = cv2.convertScaleAbs(img_np, alpha=1.3, beta=0)
+    img_np = cv2.convertScaleAbs(img_np, alpha=1.2, beta=10) # Softer contrast
     return Image.fromarray(img_np)
 
 def add_face_light(image):
@@ -86,17 +86,21 @@ def add_face_light(image):
             dx = (x - cx) / (w * 0.5)
             dy = (y - cy) / (h * 0.5)
             dist = np.sqrt(dx*dx + dy*dy)
-            mask[y, x] = np.exp(-dist * 3)
+            mask[y, x] = np.exp(-dist * 2.5) # Wider, softer light spread
 
     mask = cv2.GaussianBlur(mask, (201, 201), 0)
 
     for i in range(3):
-        img[:, :, i] += mask * 75
+        img[:, :, i] += mask * 60
 
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
-def create_black_background():
+def create_gradient_background():
+    # Nolan image has a very subtle dark gray gradient, not pure black
     bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
+    for x in range(WIDTH):
+        val = int(10 + (x / WIDTH) * 15)
+        bg[:, x] = (val, val, val)
     return Image.fromarray(bg)
 
 def add_vignette(image):
@@ -123,7 +127,7 @@ def add_text_glow(bg):
 
     for x in range(w):
         strength = max(0, (x - w * 0.55) / (w * 0.45))
-        overlay[:, x] += strength * 25
+        overlay[:, x] += strength * 15 # Subtle glow
 
     overlay = cv2.GaussianBlur(overlay, (301, 301), 0)
 
@@ -132,16 +136,17 @@ def add_text_glow(bg):
 
 def add_film_grain(image):
     img = np.array(image).astype(np.float32)
-    noise = np.random.normal(0, 8, img.shape)
+    noise = np.random.normal(0, 6, img.shape) # Softer grain
     img += noise
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
-def draw_text(draw, text, x, y, font):
+def draw_text_left(draw, text, x, y, font):
     lines = text.split("\n")
     y_offset = 0
     for line in lines:
-        draw.text((x, y + y_offset), line, font=font, fill=(235,235,235))
-        y_offset += int(font.size * 0.85)
+        # Metallic silver/gray text, left aligned
+        draw.text((x, y + y_offset), line, font=font, fill=(180, 180, 180)) 
+        y_offset += int(font.size * 0.90)
 
 # ======================
 # MAIN POSTER FUNCTION
@@ -150,11 +155,10 @@ def draw_text(draw, text, x, y, font):
 def create_poster(image_bytes, name, output):
     # Remove BG
     subject = Image.open(io.BytesIO(remove(image_bytes))).convert("RGBA")
-
     subject = feather_edges(subject)
     
-    # Scale appropriately (bigger size requested earlier)
-    subject.thumbnail((900, 1000))
+    # Scale much larger to match Nolan framing
+    subject.thumbnail((1100, 1200))
 
     # Save transparency mask
     alpha = subject.getchannel("A")
@@ -170,10 +174,10 @@ def create_poster(image_bytes, name, output):
     # Re-apply mask
     subject.putalpha(alpha)
 
-    bg = create_black_background()
+    bg = create_gradient_background()
 
-    # paste subject
-    x_offset = 50
+    # Paste subject shifted left (-50 offset instead of +50)
+    x_offset = -50
     y_offset = HEIGHT - subject.height
     bg.paste(subject, (x_offset, y_offset), subject)
 
@@ -181,13 +185,13 @@ def create_poster(image_bytes, name, output):
     bg = add_vignette(bg)
 
     draw = ImageDraw.Draw(bg)
-    # Fallback to default if Oswald isn't found
     try:
-        font = ImageFont.truetype(FONT_PATH, 120)
+        font = ImageFont.truetype(FONT_PATH, 140)
     except OSError:
         font = ImageFont.load_default()
 
-    draw_text(draw, name.upper().replace(" ", "\n"), WIDTH//2 + 150, HEIGHT//2 - 80, font)
+    # Title case, replace spaces with newlines, left align near center
+    draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.35), font)
 
     bg = add_film_grain(bg)
     bg.save(output, quality=95)
