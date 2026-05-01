@@ -112,7 +112,7 @@ def add_face_light(image):
 
 def create_gradient_background():
     bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
-    bg[:, :] = (6, 7, 7)
+    bg[:, :] = (22, 23, 23)
     return Image.fromarray(bg)
 
 def add_film_grain(image):
