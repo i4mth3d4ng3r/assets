@@ -12,6 +12,9 @@ jobs:
   run-backdrop:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,26 +25,38 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        # backdrop.py requires requests and Pillow (PIL)
         run: pip install requests Pillow
+
+      # 1. ADDED: Create the images directory so it exists
+      - name: Create images directory
+        run: mkdir -p images
 
       - name: Run backdrop.py
         env:
-          # Automatically injects your API keys from GitHub Secrets
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           FANART_API_KEY: ${{ secrets.FANART_API_KEY }}
         run: |
+          # 2. ADDED: --output-dir images forces the script to save there
           python3 backdrop.py \
             --api-key "$TMDB_API_KEY" \
             --fanart-key "$FANART_API_KEY" \
+            --output-dir images \
             ${{ inputs.args }}
+
+      - name: Commit and push images to repository
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # 3. ADDED: Only stage files inside the images directory
+          git add images/
+          
+          git diff --quiet && git diff --staged --quiet || git commit -m "Add auto-generated backdrop images"
+          git push
 
       - name: Upload generated image
         uses: actions/upload-artifact@v4
         with:
           name: generated-backdrops
-          # Uploads any JPG/PNG files created in the workspace or output folder
-          path: |
-            *.jpg
-            *.png
-            output/images
+          # 4. ADDED: Update artifact path to match the new folder
+          path: images/
