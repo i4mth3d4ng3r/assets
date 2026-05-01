@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "fonts/Oswald.ttf"
+FONT_PATH = "fonts/Oswald-Bold.ttf"
 
 # ======================
 # TMDB FUNCTIONS
@@ -65,7 +65,9 @@ def download_image(path):
 
 def feather_edges(subject):
     alpha = np.array(subject.split()[-1]).astype(np.float32)
-    alpha = cv2.GaussianBlur(alpha, (21, 21), 0)
+    alpha = cv2.GaussianBlur(alpha, (31, 31), 0)
+    kernel = np.ones((3, 3), np.uint8)
+    alpha = cv2.erode(alpha, kernel, iterations=1)
     subject.putalpha(Image.fromarray(alpha.astype(np.uint8)))
     return subject
 
@@ -74,38 +76,39 @@ def fade_right_edge(img):
     h, w = arr.shape[:2]
     alpha = arr[:, :, 3]
 
-    fade_start = int(w * 0.82)  # softer fade
-
-    for x in range(fade_start, w):
-        fade_factor = 1.0 - ((x - fade_start) / (w - fade_start))
-        alpha[:, x] *= fade_factor
+    for y in range(h):
+        for x in range(w):
+            nx = x / w
+            ny = y / h
+            fade = 1.0 - max(0, (nx - 0.86) * 4.0)
+            fade *= 1.0 - (ny * 0.15)
+            alpha[y, x] *= np.clip(fade, 0, 1)
 
     arr[:, :, 3] = alpha
     return Image.fromarray(arr.astype(np.uint8))
 
 def enhance_contrast(img):
-    img_np = np.array(img)
-    img_np = cv2.convertScaleAbs(img_np, alpha=1.1, beta=-5)
+    img_np = np.array(img).astype(np.float32)
+    img_np = (img_np / 255.0) ** 0.9 * 255
+    img_np = cv2.convertScaleAbs(img_np, alpha=1.30, beta=-20)
     return Image.fromarray(img_np)
 
 def add_face_light(image):
     img = np.array(image).astype(np.float32)
     h, w = img.shape[:2]
-
-    cx, cy = int(w * 0.38), int(h * 0.42)
-    mask = np.zeros((h, w), dtype=np.float32)
+    light = np.zeros((h, w), dtype=np.float32)
 
     for y in range(h):
         for x in range(w):
-            dx = (x - cx) / (w * 0.7)
-            dy = (y - cy) / (h * 0.7)
-            dist = np.sqrt(dx * dx + dy * dy)
-            mask[y, x] = np.exp(-dist * 1.8)
+            lx = x / w
+            ly = y / h
+            val = 1.0 - (lx * 0.8 + ly * 0.6)
+            light[y, x] = np.clip(val, 0, 1)
 
-    mask = cv2.GaussianBlur(mask, (251, 251), 0)
+    light = cv2.GaussianBlur(light, (201, 201), 0)
 
     for i in range(3):
-        img[:, :, i] += mask * 25  # softer lighting
+        img[:, :, i] *= (0.85 + light * 0.25)
 
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
@@ -114,20 +117,17 @@ def create_gradient_background():
 
     for y in range(HEIGHT):
         for x in range(WIDTH):
-            dx = (x - WIDTH * 0.55) / WIDTH
-            dy = (y - HEIGHT * 0.5) / HEIGHT
-            dist = np.sqrt(dx * dx + dy * dy)
-
-            val = 30 - dist * 40
-            val = np.clip(val, 12, 35)
-
+            nx = x / WIDTH
+            ny = y / HEIGHT
+            val = 18 + (nx * 10)
+            val -= abs(ny - 0.5) * 8
             bg[y, x] = (val, val, val)
 
-    return Image.fromarray(bg.astype(np.uint8))
+    return Image.fromarray(np.clip(bg, 10, 35).astype(np.uint8))
 
 def add_film_grain(image):
     img = np.array(image).astype(np.float32)
-    noise = np.random.normal(0, 3, img.shape)  # reduced grain
+    noise = np.random.normal(0, 3, img.shape)
     img += noise
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
@@ -136,8 +136,8 @@ def draw_text_left(draw, text, x, y, font):
     y_offset = 0
 
     for line in lines:
-        draw.text((x, y + y_offset), line, font=font, fill=(210, 210, 210))
-        y_offset += int(font.size * 0.85)
+        draw.text((x, y + y_offset), line, font=font, fill=(225, 225, 225))
+        y_offset += int(font.size * 0.95)
 
 # ======================
 # MAIN POSTER FUNCTION
@@ -148,7 +148,7 @@ def create_poster(image_bytes, name, output):
     subject = feather_edges(subject)
     subject = fade_right_edge(subject)
 
-    subject.thumbnail((1100, 1200))
+    subject.thumbnail((800, 900))
 
     alpha = subject.getchannel("A")
     gray = subject.convert("L")
@@ -160,25 +160,26 @@ def create_poster(image_bytes, name, output):
 
     bg = create_gradient_background()
 
-    # improved positioning
-    x_offset = int(WIDTH * 0.10)
-    y_offset = max(0, HEIGHT - subject.height + 50)
+    x_offset = int(WIDTH * 0.02)
+    y_offset = max(int(HEIGHT * 0.12), HEIGHT - subject.height - 10)
 
     bg.paste(subject, (x_offset, y_offset), subject)
 
     draw = ImageDraw.Draw(bg)
 
     try:
-        font = ImageFont.truetype(FONT_PATH, 160)
+        font = ImageFont.truetype(FONT_PATH, 130)
     except OSError:
-        font = ImageFont.load_default()
+        try:
+            font = ImageFont.truetype("fonts/Oswald.ttf", 130)
+        except OSError:
+            font = ImageFont.load_default()
 
-    # new text layout (left-aligned, closer to subject)
     draw_text_left(
         draw,
         name.title().replace(" ", "\n"),
-        int(WIDTH * 0.55),
-        int(HEIGHT * 0.38),
+        int(WIDTH * 0.53),
+        int(HEIGHT * 0.22),
         font
     )
 
