@@ -70,12 +70,10 @@ def feather_edges(subject):
     return subject
 
 def fade_right_edge(img):
-    # Fades the right side of the subject into transparency so there isn't a hard cut
     arr = np.array(img).astype(np.float32)
     h, w = arr.shape[:2]
     alpha = arr[:, :, 3]
     
-    # Create a gradient mask that goes from 1 to 0 on the right side
     fade_start = int(w * 0.70)
     for x in range(fade_start, w):
         fade_factor = 1.0 - ((x - fade_start) / (w - fade_start))
@@ -112,7 +110,7 @@ def add_face_light(image):
 
 def create_gradient_background():
     bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
-    bg[:, :] = (22, 23, 23)
+    bg[:, :] = (22, 22, 22)
     return Image.fromarray(bg)
 
 def add_film_grain(image):
@@ -121,11 +119,15 @@ def add_film_grain(image):
     img += noise
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
-def draw_text_left(draw, text, x, y, font):
+def draw_text_right(draw, text, x, y, font):
     lines = text.split("\n")
     y_offset = 0
     for line in lines:
-        draw.text((x, y + y_offset), line, font=font, fill=(180, 180, 180)) 
+        # Compute text width dynamically
+        bbox = draw.textbbox((0, 0), line, font=font)
+        w = bbox[2] - bbox[0]
+        # Draw text shifted to the left by its width so it right-aligns perfectly to 'x'
+        draw.text((x - w, y + y_offset), line, font=font, fill=(180, 180, 180))
         y_offset += int(font.size * 0.90)
 
 # ======================
@@ -160,7 +162,8 @@ def create_poster(image_bytes, name, output):
     except OSError:
         font = ImageFont.load_default()
 
-    draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.40), font)
+    # Positioned at 85% of the screen width to anchor it cleanly on the right
+    draw_text_right(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.85), int(HEIGHT * 0.40), font)
 
     bg = add_film_grain(bg)
     bg.save(output, quality=95)
