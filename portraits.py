@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "arial.ttf" # Using standard bold sans-serif
+FONT_PATH = "arial.ttf"
 
 # ======================
 # TMDB FUNCTIONS
@@ -71,7 +71,7 @@ def feather_edges(subject):
 
 def enhance_contrast(img):
     img_np = np.array(img)
-    img_np = cv2.convertScaleAbs(img_np, alpha=1.2, beta=10) # Softer contrast
+    img_np = cv2.convertScaleAbs(img_np, alpha=1.2, beta=10)
     return Image.fromarray(img_np)
 
 def add_face_light(image):
@@ -86,7 +86,7 @@ def add_face_light(image):
             dx = (x - cx) / (w * 0.5)
             dy = (y - cy) / (h * 0.5)
             dist = np.sqrt(dx*dx + dy*dy)
-            mask[y, x] = np.exp(-dist * 2.5) # Wider, softer light spread
+            mask[y, x] = np.exp(-dist * 2.5)
 
     mask = cv2.GaussianBlur(mask, (201, 201), 0)
 
@@ -96,47 +96,14 @@ def add_face_light(image):
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
 def create_gradient_background():
-    # Nolan image has a very subtle dark gray gradient, not pure black
+    # Nolan image background is a flat, very dark gray (almost black)
     bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
-    for x in range(WIDTH):
-        val = int(10 + (x / WIDTH) * 15)
-        bg[:, x] = (val, val, val)
+    bg[:, :] = (6, 7, 7)
     return Image.fromarray(bg)
-
-def add_vignette(image):
-    w, h = image.size
-    vignette = np.zeros((h, w), dtype=np.float32)
-
-    for y in range(h):
-        for x in range(w):
-            dx = (x - w / 2) / (w / 2)
-            dy = (y - h / 2) / (h / 2)
-            vignette[y, x] = 1 - min(np.sqrt(dx*dx + dy*dy), 1)
-
-    vignette = cv2.GaussianBlur(vignette, (201, 201), 0)
-
-    img = np.array(image).astype(np.float32)
-    for i in range(3):
-        img[:, :, i] *= vignette
-
-    return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
-
-def add_text_glow(bg):
-    overlay = np.zeros_like(np.array(bg)).astype(np.float32)
-    h, w = overlay.shape[:2]
-
-    for x in range(w):
-        strength = max(0, (x - w * 0.55) / (w * 0.45))
-        overlay[:, x] += strength * 15 # Subtle glow
-
-    overlay = cv2.GaussianBlur(overlay, (301, 301), 0)
-
-    result = np.array(bg).astype(np.float32) + overlay
-    return Image.fromarray(np.clip(result, 0, 255).astype(np.uint8))
 
 def add_film_grain(image):
     img = np.array(image).astype(np.float32)
-    noise = np.random.normal(0, 6, img.shape) # Softer grain
+    noise = np.random.normal(0, 6, img.shape)
     img += noise
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
@@ -144,7 +111,6 @@ def draw_text_left(draw, text, x, y, font):
     lines = text.split("\n")
     y_offset = 0
     for line in lines:
-        # Metallic silver/gray text, left aligned
         draw.text((x, y + y_offset), line, font=font, fill=(180, 180, 180)) 
         y_offset += int(font.size * 0.90)
 
@@ -153,36 +119,28 @@ def draw_text_left(draw, text, x, y, font):
 # ======================
 
 def create_poster(image_bytes, name, output):
-    # Remove BG
     subject = Image.open(io.BytesIO(remove(image_bytes))).convert("RGBA")
     subject = feather_edges(subject)
     
-    # Scale much larger to match Nolan framing
     subject.thumbnail((1100, 1200))
 
-    # Save transparency mask
     alpha = subject.getchannel("A")
-
-    # Grayscale
     gray = subject.convert("L")
     subject = Image.merge("RGB", (gray, gray, gray))
 
-    # Effects
     subject = enhance_contrast(subject)
     subject = add_face_light(subject)
-
-    # Re-apply mask
     subject.putalpha(alpha)
 
     bg = create_gradient_background()
 
-    # Paste subject shifted left (-50 offset instead of +50)
     x_offset = -50
     y_offset = HEIGHT - subject.height
     bg.paste(subject, (x_offset, y_offset), subject)
 
-    bg = add_text_glow(bg)
-    bg = add_vignette(bg)
+    # REMOVED VIGNETTE AND TEXT GLOW HERE
+    # bg = add_text_glow(bg)
+    # bg = add_vignette(bg)
 
     draw = ImageDraw.Draw(bg)
     try:
@@ -190,7 +148,6 @@ def create_poster(image_bytes, name, output):
     except OSError:
         font = ImageFont.load_default()
 
-    # Title case, replace spaces with newlines, left align near center
     draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.35), font)
 
     bg = add_film_grain(bg)
