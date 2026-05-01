@@ -86,7 +86,7 @@ def fade_right_edge(img):
 
 def enhance_contrast(img):
     img_np = np.array(img)
-    img_np = cv2.convertScaleAbs(img_np, alpha=1.1, beta=5)
+    img_np = cv2.convertScaleAbs(img_np, alpha=1.1, beta=-5)
     return Image.fromarray(img_np)
 
 def add_face_light(image):
