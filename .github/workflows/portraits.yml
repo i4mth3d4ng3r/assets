@@ -1,0 +1,64 @@
+name: Generate Portraits
+
+on:
+  workflow_dispatch:
+    inputs:
+      args:
+        description: 'Arguments for portraits.py (e.g., --person "Tom Cruise" --size 1600x900)'
+        required: true
+        type: string
+
+jobs:
+  run-portraits:
+    runs-on: ubuntu-latest
+
+    # Required permission for the bot to push commits to your repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        # Pinned mediapipe to a version <0.10.31 to prevent the solutions AttributeError
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests numpy opencv-python Pillow rembg "mediapipe<0.10.31" onnxruntime
+
+      - name: Create images directory
+        run: mkdir -p images
+
+      - name: Run portraits.py
+        env:
+          # Automatically injects your API key from GitHub Secrets
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          # Pass the arguments string directly to the script
+          python3 portraits.py ${{ inputs.args }}
+          
+          # Move any generated images into the images/ directory
+          mv *.jpg images/ 2>/dev/null || true
+
+      - name: Commit and push images to repository
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Add the images directory
+          git add images/
+          
+          # Only attempt to commit if new files were actually generated
+          git diff --quiet && git diff --staged --quiet || git commit -m "Add auto-generated portrait images"
+          git push
+
+      - name: Upload generated image
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-portraits
+          path: images/
