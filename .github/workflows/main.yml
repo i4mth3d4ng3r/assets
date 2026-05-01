@@ -1,0 +1,47 @@
+name: Generate Backdrop
+
+on:
+  workflow_dispatch:
+    inputs:
+      args:
+        description: 'Arguments for backdrop.py (e.g., --label "Trending" --tmdb-request "movie:/movie/popular" --size 4k)'
+        required: true
+        type: string
+
+jobs:
+  run-backdrop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        # backdrop.py requires requests and Pillow (PIL)
+        run: pip install requests Pillow
+
+      - name: Run backdrop.py
+        env:
+          # Automatically injects your API keys from GitHub Secrets
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          FANART_API_KEY: ${{ secrets.FANART_API_KEY }}
+        run: |
+          python3 backdrop.py \
+            --api-key "$TMDB_API_KEY" \
+            --fanart-key "$FANART_API_KEY" \
+            ${{ inputs.args }}
+
+      - name: Upload generated image
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-backdrops
+          # Uploads any JPG/PNG files created in the workspace or output folder
+          path: |
+            *.jpg
+            *.png
+            output/images
