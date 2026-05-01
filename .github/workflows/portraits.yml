@@ -26,10 +26,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        # Pinned mediapipe to a version <0.10.31 to prevent the solutions AttributeError
+        # Hard pinned mediapipe to 0.10.14 to guarantee the solutions module loads correctly
         run: |
           python -m pip install --upgrade pip
-          pip install requests numpy opencv-python Pillow rembg "mediapipe<0.10.31" onnxruntime
+          pip install requests numpy opencv-python Pillow rembg "mediapipe==0.10.14" onnxruntime
 
       - name: Create images directory
         run: mkdir -p images
