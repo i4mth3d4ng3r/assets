@@ -92,7 +92,7 @@ def detect_face_and_eyes(pil_img):
 
 def smart_crop(pil_img, target_ratio=16/9):
     data = detect_face_and_eyes(pil_img)
-    if not
+    if not 
         return pil_img
 
     img_w, img_h = pil_img.size
