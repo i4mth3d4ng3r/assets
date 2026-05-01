@@ -73,12 +73,13 @@ def fade_right_edge(img):
     arr = np.array(img).astype(np.float32)
     h, w = arr.shape[:2]
     alpha = arr[:, :, 3]
-    
-    fade_start = int(w * 0.70)
+
+    fade_start = int(w * 0.82)  # softer fade
+
     for x in range(fade_start, w):
         fade_factor = 1.0 - ((x - fade_start) / (w - fade_start))
         alpha[:, x] *= fade_factor
-        
+
     arr[:, :, 3] = alpha
     return Image.fromarray(arr.astype(np.uint8))
 
@@ -91,44 +92,52 @@ def add_face_light(image):
     img = np.array(image).astype(np.float32)
     h, w = img.shape[:2]
 
-    cx, cy = int(w * 0.35), int(h * 0.45)
+    cx, cy = int(w * 0.38), int(h * 0.42)
     mask = np.zeros((h, w), dtype=np.float32)
 
     for y in range(h):
         for x in range(w):
-            dx = (x - cx) / (w * 0.5)
-            dy = (y - cy) / (h * 0.5)
-            dist = np.sqrt(dx*dx + dy*dy)
-            mask[y, x] = np.exp(-dist * 2.5)
+            dx = (x - cx) / (w * 0.7)
+            dy = (y - cy) / (h * 0.7)
+            dist = np.sqrt(dx * dx + dy * dy)
+            mask[y, x] = np.exp(-dist * 1.8)
 
-    mask = cv2.GaussianBlur(mask, (201, 201), 0)
+    mask = cv2.GaussianBlur(mask, (251, 251), 0)
 
     for i in range(3):
-        img[:, :, i] += mask * 40
+        img[:, :, i] += mask * 25  # softer lighting
 
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
 def create_gradient_background():
-    bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
-    bg[:, :] = (22, 22, 22)
-    return Image.fromarray(bg)
+    bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.float32)
+
+    for y in range(HEIGHT):
+        for x in range(WIDTH):
+            dx = (x - WIDTH * 0.55) / WIDTH
+            dy = (y - HEIGHT * 0.5) / HEIGHT
+            dist = np.sqrt(dx * dx + dy * dy)
+
+            val = 30 - dist * 40
+            val = np.clip(val, 12, 35)
+
+            bg[y, x] = (val, val, val)
+
+    return Image.fromarray(bg.astype(np.uint8))
 
 def add_film_grain(image):
     img = np.array(image).astype(np.float32)
-    noise = np.random.normal(0, 6, img.shape)
+    noise = np.random.normal(0, 3, img.shape)  # reduced grain
     img += noise
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
-def draw_text_right(draw, text, x, y, font):
+def draw_text_left(draw, text, x, y, font):
     lines = text.split("\n")
     y_offset = 0
+
     for line in lines:
-        # Compute text width dynamically
-        bbox = draw.textbbox((0, 0), line, font=font)
-        w = bbox[2] - bbox[0]
-        # Draw text shifted to the left by its width so it right-aligns perfectly to 'x'
-        draw.text((x - w, y + y_offset), line, font=font, fill=(180, 180, 180))
-        y_offset += int(font.size * 0.90)
+        draw.text((x, y + y_offset), line, font=font, fill=(210, 210, 210))
+        y_offset += int(font.size * 0.85)
 
 # ======================
 # MAIN POSTER FUNCTION
@@ -138,7 +147,7 @@ def create_poster(image_bytes, name, output):
     subject = Image.open(io.BytesIO(remove(image_bytes))).convert("RGBA")
     subject = feather_edges(subject)
     subject = fade_right_edge(subject)
-    
+
     subject.thumbnail((1100, 1200))
 
     alpha = subject.getchannel("A")
@@ -151,19 +160,27 @@ def create_poster(image_bytes, name, output):
 
     bg = create_gradient_background()
 
-    x_offset = -50
+    # improved positioning
+    x_offset = int(WIDTH * 0.10)
     y_offset = max(0, HEIGHT - subject.height + 50)
+
     bg.paste(subject, (x_offset, y_offset), subject)
 
     draw = ImageDraw.Draw(bg)
-    
+
     try:
-        font = ImageFont.truetype(FONT_PATH, 140)
+        font = ImageFont.truetype(FONT_PATH, 160)
     except OSError:
         font = ImageFont.load_default()
 
-    # Positioned at 85% of the screen width to anchor it cleanly on the right
-    draw_text_right(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.85), int(HEIGHT * 0.40), font)
+    # new text layout (left-aligned, closer to subject)
+    draw_text_left(
+        draw,
+        name.title().replace(" ", "\n"),
+        int(WIDTH * 0.55),
+        int(HEIGHT * 0.38),
+        font
+    )
 
     bg = add_film_grain(bg)
     bg.save(output, quality=95)
