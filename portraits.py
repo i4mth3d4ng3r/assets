@@ -92,7 +92,7 @@ def detect_face_and_eyes(pil_img):
 
 def smart_crop(pil_img, target_ratio=16/9):
     data = detect_face_and_eyes(pil_img)
-    if not data:
+    if not 
         return pil_img
 
     img_w, img_h = pil_img.size
@@ -220,11 +220,14 @@ def create_poster(image_bytes, name, output, width, height):
 
     subject = smart_crop(subject)
 
+    # REMBG FIX
     subject = remove(subject).convert("RGBA")
 
     subject = feather_edges(subject)
     subject.thumbnail((int(700*scale), int(800*scale)))
 
+    # ALPHA CHANNEL MASK FIX
+    alpha = subject.getchannel("A")
     gray = subject.convert("L")
     subject = Image.merge("RGB",(gray,gray,gray))
 
@@ -232,6 +235,7 @@ def create_poster(image_bytes, name, output, width, height):
 
     # 🔥 NEW RELIGHT
     subject = relight_face(subject)
+    subject.putalpha(alpha)
 
     # background
     bg = np.zeros((height,width,3),dtype=np.uint8)
@@ -239,7 +243,7 @@ def create_poster(image_bytes, name, output, width, height):
         val = int(20+(x/width)*40)
         bg[:,x]=(val,val,val)
 
-    bg = Image.fromarray(bg).convert("RGBA")
+    bg = Image.fromarray(bg)
 
     x_offset = int(50*scale)
     y_offset = height - subject.height
@@ -257,7 +261,7 @@ def create_poster(image_bytes, name, output, width, height):
     draw_text(draw, text, int(width*0.55), int(height*0.45), font)
 
     bg = add_film_grain(bg)
-    bg.convert("RGB").save(output, quality=95)
+    bg.save(output, quality=95)
 
 # ======================
 # PROCESS
