@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       args:
-        description: 'Arguments for portraits.py (e.g., --person "Tom Cruise" --size 1600x900)'
+        description: 'Arguments for portraits.py (e.g., --person "Steven Spielberg" --size 1600x900)'
         required: true
         type: string
 
