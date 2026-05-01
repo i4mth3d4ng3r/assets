@@ -34,6 +34,11 @@ jobs:
       - name: Create images directory
         run: mkdir -p images
 
+      - name: Download cinematic font
+        run: |
+          mkdir -p fonts
+          curl -sL "https://github.com/google/fonts/raw/main/ofl/oswald/Oswald%5Bwght%5D.ttf" -o fonts/Oswald.ttf
+
       - name: Run portraits.py
         env:
           # Automatically injects your API key from GitHub Secrets
