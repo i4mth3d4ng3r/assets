@@ -11,7 +11,7 @@ from rembg import remove
 # CONFIG
 # ======================
 
-TMDB_API_KEY = "YOUR_API_KEY"
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "YOUR_API_KEY")
 BASE_URL = "https://api.themoviedb.org/3"
 IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
@@ -23,14 +23,23 @@ FONT_PATH = "arial.ttf"
 # TMDB FUNCTIONS
 # ======================
 
-def search_person(name):
+def search_person(identifier):
+    # Check if the input is an ID number
+    if str(identifier).isdigit():
+        res = requests.get(
+            f"{BASE_URL}/person/{identifier}",
+            params={"api_key": TMDB_API_KEY}
+        ).json()
+        return res if "id" in res else None
+
+    # Otherwise, search by name
     res = requests.get(
         f"{BASE_URL}/search/person",
-        params={"api_key": TMDB_API_KEY, "query": name}
+        params={"api_key": TMDB_API_KEY, "query": identifier}
     ).json()
 
     for p in res.get("results", []):
-        if p["name"].lower() == name.lower():
+        if p["name"].lower() == str(identifier).lower():
             return p
 
     return res["results"][0] if res.get("results") else None
@@ -158,14 +167,14 @@ def draw_text(draw, text, x, y, font):
 # ======================
 
 def create_poster(image_bytes, name, output):
-    subject = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
-
     # Remove BG
     subject = Image.open(io.BytesIO(remove(image_bytes))).convert("RGBA")
 
     subject = feather_edges(subject)
-
     subject.thumbnail((700, 800))
+
+    # Save transparency mask before applying grayscale and lighting effects
+    alpha = subject.getchannel("A")
 
     # grayscale
     gray = subject.convert("L")
@@ -173,6 +182,9 @@ def create_poster(image_bytes, name, output):
 
     subject = enhance_contrast(subject)
     subject = add_face_light(subject)
+
+    # Re-apply the transparency mask before pasting
+    subject.putalpha(alpha)
 
     bg = create_gradient_background()
 
@@ -198,10 +210,10 @@ def create_poster(image_bytes, name, output):
 # CLI
 # ======================
 
-def process_person(name):
-    print(f"Processing: {name}")
+def process_person(identifier):
+    print(f"Processing: {identifier}")
 
-    person = search_person(name)
+    person = search_person(identifier)
     if not person:
         print("Not found")
         return
@@ -213,6 +225,8 @@ def process_person(name):
 
     image_bytes = download_image(img_path)
 
+    # Use the actual name for the text and filename, not the ID
+    name = person["name"]
     filename = name.replace(" ", "_") + ".jpg"
 
     create_poster(image_bytes, name, filename)
@@ -223,11 +237,13 @@ def process_person(name):
 def main():
     parser = argparse.ArgumentParser(description="Cinematic Portrait Generator")
     parser.add_argument("--person", action="append", required=True)
+    # Added so the GitHub Action doesn't crash if `--size 3840x2160` is passed
+    parser.add_argument("--size", required=False)
 
     args = parser.parse_args()
 
-    for name in args.person:
-        process_person(name)
+    for identifier in args.person:
+        process_person(identifier)
 
 
 if __name__ == "__main__":
