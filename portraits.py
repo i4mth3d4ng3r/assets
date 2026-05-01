@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "arial.ttf"
+FONT_PATH = "fonts/Roboto-Bold.ttf"
 
 # ======================
 # TMDB FUNCTIONS
@@ -69,6 +69,21 @@ def feather_edges(subject):
     subject.putalpha(Image.fromarray(alpha.astype(np.uint8)))
     return subject
 
+def fade_right_edge(img):
+    # Fades the right side of the subject into transparency so there isn't a hard cut
+    arr = np.array(img).astype(np.float32)
+    h, w = arr.shape[:2]
+    alpha = arr[:, :, 3]
+    
+    # Create a gradient mask that goes from 1 to 0 on the right side
+    fade_start = int(w * 0.70)
+    for x in range(fade_start, w):
+        fade_factor = 1.0 - ((x - fade_start) / (w - fade_start))
+        alpha[:, x] *= fade_factor
+        
+    arr[:, :, 3] = alpha
+    return Image.fromarray(arr.astype(np.uint8))
+
 def enhance_contrast(img):
     img_np = np.array(img)
     img_np = cv2.convertScaleAbs(img_np, alpha=1.2, beta=10)
@@ -96,7 +111,6 @@ def add_face_light(image):
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
 def create_gradient_background():
-    # Nolan image background is a flat, very dark gray (almost black)
     bg = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
     bg[:, :] = (6, 7, 7)
     return Image.fromarray(bg)
@@ -121,6 +135,7 @@ def draw_text_left(draw, text, x, y, font):
 def create_poster(image_bytes, name, output):
     subject = Image.open(io.BytesIO(remove(image_bytes))).convert("RGBA")
     subject = feather_edges(subject)
+    subject = fade_right_edge(subject)
     
     subject.thumbnail((1100, 1200))
 
@@ -135,20 +150,19 @@ def create_poster(image_bytes, name, output):
     bg = create_gradient_background()
 
     x_offset = -50
-    y_offset = HEIGHT - subject.height
+    y_offset = max(0, HEIGHT - subject.height + 50)
     bg.paste(subject, (x_offset, y_offset), subject)
-
-    # REMOVED VIGNETTE AND TEXT GLOW HERE
-    # bg = add_text_glow(bg)
-    # bg = add_vignette(bg)
 
     draw = ImageDraw.Draw(bg)
     try:
         font = ImageFont.truetype(FONT_PATH, 140)
     except OSError:
-        font = ImageFont.load_default()
+        import urllib.request
+        os.makedirs("fonts", exist_ok=True)
+        urllib.request.urlretrieve("https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf", "fonts/Roboto-Bold.ttf")
+        font = ImageFont.truetype("fonts/Roboto-Bold.ttf", 140)
 
-    draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.35), font)
+    draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.40), font)
 
     bg = add_film_grain(bg)
     bg.save(output, quality=95)
