@@ -220,7 +220,7 @@ def create_poster(image_bytes, name, output, width, height):
 
     subject = smart_crop(subject)
 
-    subject = Image.open(io.BytesIO(remove(subject.tobytes()))).convert("RGBA")
+    subject = remove(subject).convert("RGBA")
 
     subject = feather_edges(subject)
     subject.thumbnail((int(700*scale), int(800*scale)))
