@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "arial.ttf"
+FONT_PATH = "fonts/Oswald.ttf"
 
 # ======================
 # TMDB FUNCTIONS
@@ -199,7 +199,8 @@ def create_poster(image_bytes, name, output):
     draw = ImageDraw.Draw(bg)
     font = ImageFont.truetype(FONT_PATH, 120)
 
-    draw_text(draw, name.replace(" ", "\n"), WIDTH//2 + 100, HEIGHT//2 - 80, font)
+    # Make the text uppercase for that cinematic feel
+    draw_text(draw, name.upper().replace(" ", "\n"), WIDTH//2 + 100, HEIGHT//2 - 80, font)
 
     bg = add_film_grain(bg)
 
@@ -237,7 +238,7 @@ def process_person(identifier):
 def main():
     parser = argparse.ArgumentParser(description="Cinematic Portrait Generator")
     parser.add_argument("--person", action="append", required=True)
-    # Added so the GitHub Action doesn't crash if `--size 3840x2160` is passed
+    # Added so the GitHub Action doesn't crash if `--size` is passed
     parser.add_argument("--size", required=False)
 
     args = parser.parse_args()
