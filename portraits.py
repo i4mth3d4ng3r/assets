@@ -95,6 +95,7 @@ def smart_crop(pil_img, target_ratio=16/9):
     if not 
         return pil_img
 
+
     img_w, img_h = pil_img.size
     eye_x, eye_y = data["eye_center"]
 
