@@ -239,7 +239,7 @@ def create_poster(image_bytes, name, output, width, height):
         val = int(20+(x/width)*40)
         bg[:,x]=(val,val,val)
 
-    bg = Image.fromarray(bg)
+    bg = Image.fromarray(bg).convert("RGBA")
 
     x_offset = int(50*scale)
     y_offset = height - subject.height
@@ -257,7 +257,7 @@ def create_poster(image_bytes, name, output, width, height):
     draw_text(draw, text, int(width*0.55), int(height*0.45), font)
 
     bg = add_film_grain(bg)
-    bg.save(output, quality=95)
+    bg.convert("RGB").save(output, quality=95)
 
 # ======================
 # PROCESS
