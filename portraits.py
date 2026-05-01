@@ -106,7 +106,7 @@ def add_face_light(image):
     mask = cv2.GaussianBlur(mask, (201, 201), 0)
 
     for i in range(3):
-        img[:, :, i] += mask * 60
+        img[:, :, i] += mask * 40
 
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8))
 
