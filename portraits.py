@@ -17,7 +17,7 @@ IMAGE_BASE = "https://image.tmdb.org/t/p/original"
 
 WIDTH = 1600
 HEIGHT = 900
-FONT_PATH = "fonts/Roboto-Bold.ttf"
+FONT_PATH = "fonts/Oswald.ttf"
 
 # ======================
 # TMDB FUNCTIONS
@@ -154,13 +154,11 @@ def create_poster(image_bytes, name, output):
     bg.paste(subject, (x_offset, y_offset), subject)
 
     draw = ImageDraw.Draw(bg)
+    
     try:
         font = ImageFont.truetype(FONT_PATH, 140)
     except OSError:
-        import urllib.request
-        os.makedirs("fonts", exist_ok=True)
-        urllib.request.urlretrieve("https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf", "fonts/Roboto-Bold.ttf")
-        font = ImageFont.truetype("fonts/Roboto-Bold.ttf", 140)
+        font = ImageFont.load_default()
 
     draw_text_left(draw, name.title().replace(" ", "\n"), int(WIDTH * 0.45), int(HEIGHT * 0.40), font)
 
