@@ -1,0 +1,51 @@
+{
+  "name": "Kev's Repo",
+  "subtitle": "A source for all of my apps",
+  "description": "Welcome to my source! Here you'll find all of my apps.",
+  "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/main/assets/android/playstore-icon.png",
+  "website": "https://github.com/NuvioMedia/",
+  "tintColor": "#6156e2",
+  "featuredApps": [
+    "com.nuvioios.media"
+  ],
+  "apps": [
+    {
+      "name": "Nuvio",
+      "bundleIdentifier": "com.nuvioios.media",
+      "developerName": "Tapframe",
+      "subtitle": "Media player and discovery app",
+      "localizedDescription": "Nuvio is a media player and metadata discovery application for user-provided and user-installed sources.",
+      "iconURL": "https://raw.githubusercontent.com/NuvioMedia/NuvioMobile/refs/heads/main/assets/android/playstore-icon.png",
+      "tintColor": "#04dcfc",
+      "category": "entertainment",
+      "screenshots": [
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20-%202025-08-27%20at%2021.08.32-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/WhatsApp%20Image%202025-09-02%20at%2000.24.31-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/seasonandepisode-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20-%202025-08-27%20at%2021.09.43-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20-%202025-08-27%20at%2021.10.14-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/trailer-hero-section.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/video-player-interface.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/ratingscreen-portrait.png?raw=true",
+        "https://github.com/tapframe/NuvioStreaming/blob/main/screenshots/search-portrait.png?raw=true"
+      ],
+      "versions": [
+        {
+          "version": "0.1.13",
+          "buildVersion": "51",
+          "date": "2026-05-02",
+          "localizedDescription": "Nuvio rewrite",
+          "downloadURL": "https://github.com/edo198320/NuvioMobile/releases/download/0.1.13/Nuvio.ipa",
+          "size": 29400000
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "App uses the local network to discover and connect to devices."
+        }
+      }
+    }
+  ],
+  "news": []
+}
