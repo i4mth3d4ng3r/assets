@@ -758,6 +758,13 @@
       "id": "gl",
       "isExpanded": true,
       "name": "Language"
+    },
+    {
+      "borderColor": "#00000000",
+      "color": "#4ECDC4",
+      "id": "gs",
+      "isExpanded": true,
+      "name": "Streaming"
     }
   ]
 }
