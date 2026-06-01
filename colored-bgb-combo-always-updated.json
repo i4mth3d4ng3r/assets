@@ -287,7 +287,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-at-dv",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/atmos-vision.png",
@@ -300,7 +300,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-at",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/atmos.png",
@@ -313,7 +313,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-th-dv",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/truehd-vision.png",
@@ -326,7 +326,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-th",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/truehd.png",
@@ -339,7 +339,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-dp-dv",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/digitalplus-vision.png",
@@ -352,7 +352,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-dp",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/digitalplus.png",
@@ -365,7 +365,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-dd-dv",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/digital-vision.png",
@@ -378,7 +378,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "ga",
       "id": "a-dd",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/digital.png",
@@ -391,7 +391,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gv",
       "id": "a-dv",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/vision.png",
@@ -404,7 +404,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gc",
       "id": "ch-71",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/7dot1.png",
@@ -417,7 +417,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gc",
       "id": "ch-51",
       "imageURL": "https://raw.githubusercontent.com/9mousaa/BetterFormatter/main/images/5dot1.png",
@@ -430,7 +430,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-en",
       "imageURL": "",
@@ -443,7 +443,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-es",
       "imageURL": "",
@@ -456,7 +456,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-fr",
       "imageURL": "",
@@ -469,7 +469,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-de",
       "imageURL": "",
@@ -482,7 +482,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-it",
       "imageURL": "",
@@ -495,7 +495,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-pt",
       "imageURL": "",
@@ -508,7 +508,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-ja",
       "imageURL": "",
@@ -521,7 +521,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-ko",
       "imageURL": "",
@@ -534,7 +534,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-zh",
       "imageURL": "",
@@ -547,7 +547,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-hi",
       "imageURL": "",
@@ -560,7 +560,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-ar",
       "imageURL": "",
@@ -573,7 +573,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-ru",
       "imageURL": "",
@@ -586,7 +586,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "groupId": "gl",
       "id": "l-mu",
       "imageURL": "",
@@ -739,28 +739,28 @@
       "name": "Visual"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "color": "#45B7D1",
       "id": "ga",
       "isExpanded": true,
       "name": "Audio"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "color": "#FFD700",
       "id": "gc",
       "isExpanded": true,
       "name": "Channels"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "color": "#4ECDC4",
       "id": "gl",
       "isExpanded": true,
       "name": "Language"
     },
     {
-      "borderColor": "#00000000",
+      "borderColor": "#FF858283",
       "color": "#4ECDC4",
       "id": "gs",
       "isExpanded": true,
