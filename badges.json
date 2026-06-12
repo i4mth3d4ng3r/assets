@@ -80,13 +80,13 @@
       "pattern": "(?i)\\b(?:seadex|best[\\s._-]?release|alt[\\s._-]?(?:best[\\s._-]?)?release)\\b|ᴀʟᴛ[\\s._-]?ʙᴇsᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ|ᴀʟᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ|ʙᴇsᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ",
       "imageURL": "https://files.catbox.moe/24qo5p.png",
       "tagColor": "#000000",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
     },
     {
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "remux-1",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_remux%20t1.png",
@@ -99,7 +99,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "remux-2",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_remux%20t2.png",
@@ -112,7 +112,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "remux-3",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_remux%20t3.png",
@@ -125,7 +125,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "blu-ray-1",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_bluray%20t1.png",
@@ -138,7 +138,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "blu-ray-2",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_bluray%20t2.png",
@@ -151,7 +151,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#2EB853",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "blu-ray-3",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_bluray%20t3.png",
@@ -164,7 +164,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "blu-ray-4",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_bluray%20t4.png",
@@ -177,7 +177,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "blu-ray-5",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_bluray%20t5.png",
@@ -229,7 +229,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-1",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t1.png",
@@ -242,7 +242,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-2",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t2.png",
@@ -255,7 +255,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#2EB853",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-3",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t3.png",
@@ -268,7 +268,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-4",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t4.png",
@@ -281,7 +281,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-5",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t5.png",
@@ -294,7 +294,7 @@
       "type": "filter"
     },
     {
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "groupId": "gms",
       "id": "web-6",
       "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_web%20t6.png",
@@ -314,7 +314,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:144[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -327,7 +327,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:240[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -340,7 +340,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:360[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -353,7 +353,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:480[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -366,7 +366,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:576[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -379,7 +379,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:1440[pi]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -392,7 +392,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:4k|2160[pi]?|uhd|3840x2160)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/7oa5vg.png",
       "tagColor": "#000000",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -405,7 +405,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:1080[pi]?|fhd|1920x1080)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:4k|2160[pi]?|uhd|3840x2160)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/p4oirk.png",
       "tagColor": "#000000",
-      "borderColor": "#2EB853",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -418,72 +418,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:720[pi]?|hd|1280x720)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:1080[pi]?|fhd|1920x1080|4k|2160[pi]?|uhd|3840x2160)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/u1hvul.png",
       "tagColor": "#000000",
-      "borderColor": "#FF7300",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gq-hc-hdrip",
-      "name": "HC HDRip",
-      "groupId": "gq",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hc[\\-_. ]?hd[\\-_. ]?rip)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#FF7300",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gq-cam",
-      "name": "CAM",
-      "groupId": "gq",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:cam(?:rip)?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gq-ts",
-      "name": "TS",
-      "groupId": "gq",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:ts)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gq-tc",
-      "name": "TC",
-      "groupId": "gq",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:tc)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gq-scr",
-      "name": "SCR",
-      "groupId": "gq",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:scr(?:een(?:er)?)?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -496,7 +431,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:remux|bdremux|uhdremux)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/mono-remux.png",
       "tagColor": "#000000",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -509,7 +444,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:bluray|blu\\-ray|bdrip|brrip)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:remux|bdremux|uhdremux)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/mono-bluray.png",
       "tagColor": "#000000",
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -522,7 +457,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:web[\\-_. ]?dl)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:remux|bdremux|uhdremux|bluray|blu\\-ray|bdrip|brrip|web[\\-_. ]?rip)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/mono-webdl.png",
       "tagColor": "#000000",
-      "borderColor": "#2EB853",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -535,7 +470,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:web[\\-_. ]?rip)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -548,7 +483,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hdtv)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -561,7 +496,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hd[\\-_. ]?rip)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -574,7 +509,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dvd[\\-_. ]?(?:rip|mux|r|full|5|9)?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -588,7 +523,7 @@
       "imageURL": "https://files.catbox.moe/nr86bb.png",
       "tagColor": "#000000",
       "textColor": "#FFFFFF",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "tagStyle": "bordered"
     },
     {
@@ -600,47 +535,8 @@
       "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/IMAX.png",
       "tagColor": "#000000",
       "textColor": "#FFFFFF",
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "tagStyle": "bordered"
-    },
-    {
-      "id": "gv-ai",
-      "name": "AI",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:ai)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gv-atmosvision",
-      "name": "AtmosVision",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?)(?:[\\s\\)\\]_.,\\-0-9]|$))(?=.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/itxfkw.png",
-      "tagColor": "#000000",
-      "borderColor": "#FFD500",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dv",
-      "name": "DV",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/q2lrf4.png",
-      "tagColor": "#000000",
-      "borderColor": "#FFD500",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
     },
     {
       "id": "v-hdr10p",
@@ -650,7 +546,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hdr10[.\\- _]?(?:\\+|plus))(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/bqoap3.png",
       "tagColor": "#000000",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -663,7 +559,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hdr10)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision|hdr10[.\\- _]?(?:\\+|plus))(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/zi2qrf.png",
       "tagColor": "#000000",
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -676,254 +572,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hdr)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision|hdr10[.\\- _]?(?:\\+|plus)|hdr10)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/aygvl8.png",
       "tagColor": "#000000",
-      "borderColor": "#176BE8",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "v-10bit",
-      "name": "10bit",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:10[\\-_. ]?bit|hi10p)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision|hdr10[.\\- _]?(?:\\+|plus)|hdr10|hdr)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/3etzny.png",
-      "tagColor": "#000000",
-      "borderColor": "#2EB853",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "v-sdr",
-      "name": "SDR",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:sdr)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision|hdr10[.\\- _]?(?:\\+|plus)|hdr10|hdr|10[\\-_. ]?bit|hi10p)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/u34gbs.png",
-      "tagColor": "#000000",
-      "borderColor": "#FF7300",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gv-hlg",
-      "name": "HLG",
-      "groupId": "gv",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:hlg)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "",
-      "tagColor": "#000000",
-      "borderColor": "#2EB853",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-at",
-      "name": "Atmos",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dv|dovi|dolby[.\\- _]?vision)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/694i86.png",
-      "tagColor": "#000000",
-      "borderColor": "#FFD500",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dtsx",
-      "name": "DTS:X",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dts[\\-_.: ]?x)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/dtsx.png",
-      "tagColor": "#000000",
-      "borderColor": "#FFD500",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-th",
-      "name": "TrueHD",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:true[\\s._\\-]?hd)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/ltdrzt.png",
-      "tagColor": "#000000",
-      "borderColor": "#176BE8",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dtsma",
-      "name": "DTS-HD MA",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dts[\\-_. ]?(?:hd[\\-_. ]?)?ma)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/dtshdma.png",
-      "tagColor": "#000000",
-      "borderColor": "#176BE8",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-flac",
-      "name": "FLAC",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:flac)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/hic39r.png",
-      "tagColor": "#000000",
-      "borderColor": "#176BE8",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dtshd",
-      "name": "DTS-HD",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dts[\\-_. ]?hd)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|dts[\\-_.: ]?x|atmos|ddpa[0-9]?|true[\\s._\\-]?hd|flac)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/dtshd.png",
-      "tagColor": "#000000",
-      "borderColor": "#2EB853",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "gv-dts-es",
-      "name": "DTS-ES",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dts[\\-_. ]?es)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/1ssf92.png",
-      "tagColor": "#000000",
-      "borderColor": "#2EB853",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dts",
-      "name": "DTS",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dts)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd|dts[\\-_. ]?es)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://raw.githubusercontent.com/danielsdian/ColorfulAndConcise/main/images/dts.png",
-      "tagColor": "#000000",
-      "borderColor": "#FF7300",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dp",
-      "name": "DD+",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dd\\+|ddp|eac3|e\\-ac\\-3)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd|dts[\\-_. ]?es|dts)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/xcrtzp.png",
-      "tagColor": "#000000",
-      "borderColor": "#FF7300",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-dd",
-      "name": "DD",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:dd[25][. ][01]|ac\\-?3)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd|dts[\\-_. ]?es|dts|dd\\+|ddp|eac3|e\\-ac\\-3)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/1v58p2.png",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-opus",
-      "name": "OPUS",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:opus)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd|dts[\\-_. ]?es|dts|dd\\+|ddp|eac3|e\\-ac\\-3|dd[25][. ][01]|ac\\-?3)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/yfyrst.png",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "a-aac",
-      "name": "AAC",
-      "groupId": "ga",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:aac)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:atmos|ddpa[0-9]?|dts[\\-_.: ]?x|true[\\s._\\-]?hd|dts[\\-_. ]?(?:hd[\\-_. ]?)?ma|flac|dts[\\-_. ]?hd|dts[\\-_. ]?es|dts|dd\\+|ddp|eac3|e\\-ac\\-3|dd[25][. ][01]|ac\\-?3|opus)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/u1vaov.png",
-      "tagColor": "#000000",
-      "borderColor": "#E64141",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "ch-71",
-      "name": "7.1",
-      "groupId": "gc",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:7[.\\- _]?1(?:ch)?|8ch)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/wzv0rl.png",
-      "tagColor": "#000000",
-      "borderColor": "#FFD500",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "ch-61",
-      "name": "6.1",
-      "groupId": "gc",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:6[.\\- _]?1(?:ch)?|7ch)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:7[.\\- _]?1(?:ch)?|8ch)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/s70pkn.png",
-      "tagColor": "#000000",
-      "borderColor": "#176BE8",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "ch-51",
-      "name": "5.1",
-      "groupId": "gc",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:5[.\\- _]?1(?:ch)?|6ch)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:7[.\\- _]?1(?:ch)?|8ch|6[.\\- _]?1(?:ch)?|7ch)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/udnjve.png",
-      "tagColor": "#000000",
-      "borderColor": "#2EB853",
-      "textColor": "#FFFFFF",
-      "tagStyle": "bordered",
-      "type": "filter"
-    },
-    {
-      "id": "ch-20",
-      "name": "2.0",
-      "groupId": "gc",
-      "isEnabled": true,
-      "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:2[.\\- _]?0(?:ch)?|2ch|stereo)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-]|[A-Za-z])(?:7[.\\- _]?1(?:ch)?|8ch|6[.\\- _]?1(?:ch)?|7ch|5[.\\- _]?1(?:ch)?|6ch)(?:[\\s\\)\\]_.,\\-0-9]|$))",
-      "imageURL": "https://files.catbox.moe/1dstqe.png",
-      "tagColor": "#000000",
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -936,7 +585,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:av1)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/wthvul.png",
       "tagColor": "#000000",
-      "borderColor": "#FFD500",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -949,7 +598,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:x265|h[.\\-_ ]?265|hevc|hvc1)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:av1)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/4v50hh.png",
       "tagColor": "#000000",
-      "borderColor": "#176BE8",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -962,7 +611,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:x264|h[.\\-_ ]?264|avc|avc1)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:av1|x265|h[.\\-_ ]?265|hevc|hvc1)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/3zrclq.png",
       "tagColor": "#000000",
-      "borderColor": "#2EB853",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -975,7 +624,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:xvid)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:av1|x265|h[.\\-_ ]?265|hevc|hvc1|x264|h[.\\-_ ]?264|avc|avc1)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/gpym3p.png",
       "tagColor": "#000000",
-      "borderColor": "#FF7300",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
@@ -988,7 +637,7 @@
       "pattern": "(?i)^(?=.*(?:^|[\\s\\[(_.,\\-])(?:divx)(?:[\\s\\)\\]_.,\\-0-9]|$))(?!.*(?:^|[\\s\\[(_.,\\-])(?:av1|x265|h[.\\-_ ]?265|hevc|hvc1|x264|h[.\\-_ ]?264|avc|avc1|xvid)(?:[\\s\\)\\]_.,\\-0-9]|$))",
       "imageURL": "https://files.catbox.moe/1n6e7k.png",
       "tagColor": "#000000",
-      "borderColor": "#E64141",
+      "borderColor": "#FFFFFF",
       "textColor": "#FFFFFF",
       "tagStyle": "bordered",
       "type": "filter"
