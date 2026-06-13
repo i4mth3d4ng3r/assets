@@ -1,5 +1,23 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Adult Swim East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Adult_Swim_logo_%28v2%29.svg/330px-Adult_Swim_logo_%28v2%29.svg.png" group-title="Live Channels",Adult Swim East
+#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Adult Swim East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/ADSM.png" group-title="Live Channels",Adult Swim East
 https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_5128000.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkPacific.us" tvg-name="Adult Swim West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Adult_Swim_logo_%28v2%29.svg/330px-Adult_Swim_logo_%28v2%29.svg.png" group-title="Live Channels",Adult Swim West
+#EXTINF:-1 tvg-id="CartoonNetworkPacific.us" tvg-name="Adult Swim West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/ADSM.png" group-title="Live Channels",Adult Swim West
 https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN" tvg-logo="https://cdn.iptvboss.pro/logos/USA/CNN.us.png" group-title="Live Channels",CNN
+https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TBS.us" tvg-name="TBS East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TBS.us.png" group-title="Live Channels",TBS East
+https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TBSPacific.us" tvg-name="TBS West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TBS.us.png" group-title="Live Channels",TBS West
+https://turnerlive.warnermediacdn.com/hls/live/2023174/tbswest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="truTV.us" tvg-name="TruTV East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/truTV.us.png" group-title="Live Channels",TruTV East
+https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="truTVPacific.us" tvg-name="TruTV West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/truTV.us.png" group-title="Live Channels",TruTV West
+https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TNT.us" tvg-name="TNT East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TNT.us.png" group-title="Live Channels",TNT East
+https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TNTPacific.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TNTPacific.us.png" group-title="Live Channels",TNT West
+https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TCM.us" tvg-name="TCM West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM East
+https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="TCMPacific.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM West
+https://turnerlive.warnermediacdn.com/hls/live/2023187/tcmwest/noslate/VIDEO_1_5128000.m3u8
