@@ -19,5 +19,5 @@ https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_356
 https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 tvg-id="TCM.us" tvg-name="TCM West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM East
 https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
-#EXTINF:-1 tvg-id="TCMPacific.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM West
+#EXTINF:-1 tvg-id="TCMWest.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM West
 https://turnerlive.warnermediacdn.com/hls/live/2023187/tcmwest/noslate/VIDEO_1_5128000.m3u8
