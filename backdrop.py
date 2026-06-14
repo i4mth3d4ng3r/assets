@@ -4,7 +4,7 @@ Backdrop generator driven entirely by explicit TMDB request parameters.
 
 Purpose:
     This script generates one backdrop image set from explicit TMDB request
-    specs. It does not inspect `nuvio-collections.json` itself. Use it when
+    specs. It does not inspect `Nuvio-Collections.json` itself. Use it when
     you already know which TMDB requests should be merged into one backdrop.
     When Fanart artwork is enabled, language selection is prioritized in this
     order: preferred language, original title language, TMDB backdrop fallback,
@@ -33,10 +33,10 @@ Important parameters:
         Output directory used only when `--output` is not provided.
     --size
         Output size: `4k`, `1080p`, or `both`.
+    --profile
+        Named output profile: `compressed` or `high`.
     --quality
-        Named JPEG profile: `compressed` or `high`.
-    --jpg-quality
-        Advanced manual JPEG quality override.
+        Advanced manual output quality override used for both JPG and WEBP.
     --focus
         Grid focus preset or explicit `x,y` fractions.
     --count
@@ -82,10 +82,9 @@ TMDB_BASE = "https://api.themoviedb.org/3"
 TMDB_IMG_BASE = "https://image.tmdb.org/t/p"
 BACKDROP_SIZE = "w1280"
 FANART_BASE = "https://webservice.fanart.tv/v3"
-DEFAULT_JPG_QUALITY = 88
 QUALITY_PRESETS = {
-    "compressed": {"jpg_quality": 82, "progressive": True, "subsampling": "4:2:0"},
-    "high": {"jpg_quality": 95, "progressive": False, "subsampling": 0},
+    "compressed": {"quality": 82, "progressive": True, "subsampling": "4:2:0"},
+    "high": {"quality": 95, "progressive": False, "subsampling": 0},
 }
 
 CARD_RADIUS = 9
@@ -577,10 +576,10 @@ def apply_gradient(canvas, accent):
     return Image.alpha_composite(result, accent_grad)
 
 
-def resolve_quality_settings(quality="compressed", jpg_quality=None):
-    settings = dict(QUALITY_PRESETS[quality])
-    if jpg_quality is not None:
-        settings["jpg_quality"] = jpg_quality
+def resolve_quality_settings(profile="compressed", quality=None):
+    settings = dict(QUALITY_PRESETS[profile])
+    if quality is not None:
+        settings["quality"] = quality
     return settings
 
 
@@ -590,16 +589,24 @@ def save_output(canvas, path, quality_settings):
     final.save(
         path,
         "JPEG",
-        quality=quality_settings["jpg_quality"],
+        quality=quality_settings["quality"],
         optimize=True,
         progressive=quality_settings["progressive"],
         subsampling=quality_settings["subsampling"],
     )
-    size_mb = os.path.getsize(path) / 1_048_576
+    jpg_size_mb = os.path.getsize(path) / 1_048_576
     print(
-        f"  Saved {path} ({final.size[0]}x{final.size[1]}, {size_mb:.1f} MB, "
-        f"q={quality_settings['jpg_quality']}, mode={quality_settings['subsampling']})"
+        f"  Saved {path} ({final.size[0]}x{final.size[1]}, {jpg_size_mb:.1f} MB, "
+        f"q={quality_settings['quality']}, mode={quality_settings['subsampling']})"
     )
+    webp_path = path.with_suffix(".webp")
+    with Image.open(path) as jpg_image:
+        jpg_image.save(webp_path, "WEBP", quality=quality_settings["quality"], method=6)
+        webp_size_mb = os.path.getsize(webp_path) / 1_048_576
+        print(
+            f"  Saved {webp_path} ({jpg_image.size[0]}x{jpg_image.size[1]}, {webp_size_mb:.1f} MB, "
+            f"q={quality_settings['quality']})"
+        )
 
 
 def resolve_outputs(output=None, output_dir=None, label=None, size="both"):
@@ -636,8 +643,8 @@ def backdrops(
     focus_y=None,
     count=60,
     size="both",
-    quality="compressed",
-    jpg_quality=None,
+    profile="compressed",
+    quality=None,
     preferred_language="en",
     logger=None,
 ):
@@ -651,7 +658,7 @@ def backdrops(
     fy = FOCUS_Y if focus_y is None else focus_y
     accent = accent_color or default_accent_for_label(label)
     outputs = resolve_outputs(output=output, output_dir=output_dir, label=label, size=size)
-    quality_settings = resolve_quality_settings(quality=quality, jpg_quality=jpg_quality)
+    quality_settings = resolve_quality_settings(profile=profile, quality=quality)
 
     fanart_note = "Fanart.tv thumbs" if fanart_key else "TMDB backdrops only"
     log(f"\n{'-' * 50}")
@@ -660,7 +667,7 @@ def backdrops(
     log(f"  Lang    : preferred={preferred_language}")
     log(f"  Focus   : x={fx:.2f}, y={fy:.2f}")
     log(f"  Sizes   : {', '.join(outputs)}")
-    log(f"  Quality : {quality} (q={quality_settings['jpg_quality']})")
+    log(f"  Profile : {profile} (q={quality_settings['quality']})")
     log(f"{'-' * 50}\n")
 
     log("Fetching titles from TMDB...")
@@ -761,8 +768,8 @@ def main():
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR), help="Directory for generated files when --output is not set")
     parser.add_argument("--output", default=None, help="Exact output file path. Use this when another script has already decided the final filename.")
     parser.add_argument("--size", choices=("4k", "1080p", "both"), default="both", help="Which size(s) to render")
-    parser.add_argument("--quality", choices=tuple(QUALITY_PRESETS), default="compressed", help="Named JPEG output profile. 'compressed' is smaller, 'high' keeps more detail.")
-    parser.add_argument("--jpg-quality", type=int, default=None, help="Advanced override for JPEG quality from 1-95. If set, it overrides the selected quality profile.")
+    parser.add_argument("--profile", choices=tuple(QUALITY_PRESETS), default="compressed", help="Named output profile. 'compressed' is smaller, 'high' keeps more detail.")
+    parser.add_argument("--quality", type=int, default=None, help="Advanced override for output quality from 1-95. If set, it overrides the selected profile for both JPG and WEBP.")
     parser.add_argument(
         "--focus",
         default=None,
@@ -778,8 +785,8 @@ def main():
     try:
         accent = parse_accent_color(args.accent_color) if args.accent_color else None
         focus_x, focus_y = parse_focus_value(args.focus)
-        if args.jpg_quality is not None and (args.jpg_quality < 1 or args.jpg_quality > 95):
-            raise ValueError("--jpg-quality must be between 1 and 95.")
+        if args.quality is not None and (args.quality < 1 or args.quality > 95):
+            raise ValueError("--quality must be between 1 and 95.")
         backdrops(
             api_key=args.api_key,
             label=args.label,
@@ -792,8 +799,8 @@ def main():
             focus_y=focus_y,
             count=args.count,
             size=args.size,
+            profile=args.profile,
             quality=args.quality,
-            jpg_quality=args.jpg_quality,
             preferred_language=args.preferred_language,
         )
     except Exception as exc:
