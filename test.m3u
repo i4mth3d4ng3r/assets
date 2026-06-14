@@ -1,5 +1,0 @@
-#EXTM3U
-#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Adult Swim East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Adult_Swim_logo_%28v2%29.svg/330px-Adult_Swim_logo_%28v2%29.svg.png" group-title="Live Channels",Adult Swim East
-https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_5128000.m3u8
-#EXTINF:-1 tvg-id="CartoonNetworkPacific.us" tvg-name="Adult Swim West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Adult_Swim_logo_%28v2%29.svg/330px-Adult_Swim_logo_%28v2%29.svg.png" group-title="Live Channels",Adult Swim West
-https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_5128000.m3u8
