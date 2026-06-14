@@ -31,11 +31,11 @@
       ],
       "versions": [
         {
-          "version": "0.1.13",
+          "version": "0.2.5",
           "buildVersion": "51",
-          "date": "2026-05-02",
+          "date": "2026-06-10",
           "localizedDescription": "Nuvio rewrite",
-          "downloadURL": "https://github.com/edo198320/NuvioMobile/releases/download/0.1.13/Nuvio.ipa",
+          "downloadURL": "https://github.com/luqmanfadlli/NuvioMobile-iOS/releases/download/0.2.5/Nuvio-v0.2.5-Enhanced.ipa",
           "size": 29400000
         }
       ],
