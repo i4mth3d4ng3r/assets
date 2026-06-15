@@ -1,0 +1,151 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="GritXtra.us" tvg-name="Grit Xtra" tvg-logo="https://provider-static.plex.tv/epg/cms/production/dbbb9bca-0b08-43b5-a0e7-715df9a6dbfd/_ChannelLogo_1500x1000.png" group-title="Live Channels",Grit Xtra
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-gritxtra-tablo/playlist.m3u8
+#EXTINF:-1 tvg-id="NCIS.us" tvg-name="NCIS 24/7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/db/NCIS_%28TV_series%29_logo_2.jpg" group-title="Live Channels",NCIS 24/7
+https://jmp2.uk/plu-62f4f5de1c100100075665ef.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",NCIS: Los Angeles 24/7
+https://jmp2.uk/plu-66a106c8a79dea0008aa5ef3.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",JAG 24/7
+https://jmp2.uk/plu-66a105f4a79dea0008aa5e0f.m3u8
+#EXTINF:-1 tvg-id="PlutoTVWesterns.us@US" tvg-name="24/7 TV Westerns" tvg-logo="https://i.pinimg.com/originals/a1/73/2f/a1732fc185154c2a8ab71ec1f207b9f2.jpg" group-title="Live Channels",Pluto TV Westerns
+https://jmp2.uk/plu-62bdacc96a3751000811842d.m3u8
+#EXTINF:-1 tvg-id="PlutoTVWesterns.us@US"tvg-name="24/7 CLassic Movie Westerns" tvg-logo="https://i.pinimg.com/originals/a1/73/2f/a1732fc185154c2a8ab71ec1f207b9f2.jpg" group-title="Live Channels",Pluto Classic Movie Westerns
+https://jmp2.uk/plu-66dad50215d2c60008d7afbd.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Adult Swim East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/ADSM.png" group-title="Live Channels",Adult Swim East
+https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="CartoonNetworkPacific.us" tvg-name="Adult Swim West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/ADSM.png" group-title="Live Channels",Adult Swim West
+https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN" tvg-logo="https://cdn.iptvboss.pro/logos/USA/CNN.us.png" group-title="Live Channels",CNN
+https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TBS.us" tvg-name="TBS East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TBS.us.png" group-title="Live Channels",TBS East
+https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TBSPacific.us" tvg-name="TBS West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TBS.us.png" group-title="Live Channels",TBS West
+https://turnerlive.warnermediacdn.com/hls/live/2023174/tbswest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="truTV.us" tvg-name="TruTV East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/truTV.us.png" group-title="Live Channels",TruTV East
+https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="truTVPacific.us" tvg-name="TruTV West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/truTV.us.png" group-title="Live Channels",TruTV West
+https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TNT.us" tvg-name="TNT East" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TNT.us.png" group-title="Live Channels",TNT East
+https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TNTPacific.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TNTPacific.us.png" group-title="Live Channels",TNT West
+https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-id="TCM.us" tvg-name="TCM West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM East
+https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="TCMWest.us" tvg-name="TNT West" tvg-logo="https://cdn.iptvboss.pro/logos/USA/TCM.us.png" group-title="Live Channels",TCM West
+https://turnerlive.warnermediacdn.com/hls/live/2023187/tcmwest/noslate/VIDEO_1_5128000.m3u8
+#EXTINF:-1 tvg-id="ComedyCentralPlutoTV.us@Canada" tvg-logo="https://images.pluto.tv/channels/5ca671f215a62078d2ec0abf/thumbnail.jpg" group-title="Live Channels",Comedy Central Pluto
+https://jmp2.uk/plu-64f8a408bd341e000818fcda.m3u8
+#EXTINF:-1 tvg-id="ComedyCentralAnimation.us" tvg-logo="https://www.bubbleblabber.com/wp-content/uploads/2020/12/Screenshot-2020-12-17-at-7.01.40-PM.png" group-title="Live Channels",Comedy Central Animation Pluto
+https://jmp2.uk/plu-64f8a949f5b5e4000862467c.m3u8
+#EXTINF:-1 tvg-id="HoustonTelevision.us" tvg-logo="https://i.imgur.com/zvj1boM.jpg" group-title="Live Channels",HTV 1 Houston Television
+https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-a/playlist.m3u8
+#EXTINF:-1 tvg-id="HoustonTelevision2.us" tvg-logo="https://i.imgur.com/zvj1boM.jpg" group-title="Live Channels",HTV 2 Houston Television
+https://stream.swagit.com/live-edge/houstontx/smil:hd-16x9-2-b/playlist.m3u8
+#EXTINF:-1 tvg-id="WOAI.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/NBC_logo_2022_%28vertical%29.svg/960px-NBC_logo_2022_%28vertical%29.svg.png" group-title="Live Channels",NBC 4 San Antonio
+https://linear-703.frequency.stream/dist/stirr/703/hls/master/playlist.m3u8
+#EXTINF:-1 tvg-id="KCWX.us" tvg-logo="" group-title="Live Channels",myTV San Antonio
+http://65.36.6.216:1935/live/kcwx.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="KDFW41.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fox_Networks_Group_US_logo.svg/960px-Fox_Networks_Group_US_logo.svg.png" group-title="Live Channels",Fox 4 Dallas
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00488-foxdigital-fox4dallaskdfw-vizious/playlist.m3u8
+#EXTINF:-1 tvg-id="KXXV.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/27/WWAY_logo.png" group-title="Live Channels",ABC 25 Waco
+https://content.uplynk.com/channel/9d4e02c9c3544c269d32e6b316792c8f.m3u8
+#EXTINF:-1 tvg-id="ATXN1.us" tvg-name="ATXN1" tvg-logo="https://i.imgur.com/tSMtDlz.png" group-title="Live Channels",ATXN1 Austin
+https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(616d6f49-eaec-6f7e-7186-2bbaf66c69c0)/index.m3u8
+#EXTINF:-1 tvg-id="ATXN2.us" tvg-name="ATXN2" tvg-logo="https://i.imgur.com/tSMtDlz.png" group-title="Live Channels",ATXN2 Austin
+https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(f97b5ddc-b7e4-dff8-9f10-8c16d0833639)/index.m3u8
+#EXTINF:-1 tvg-id="ATXN3.us" tvg-name="ATXN3" tvg-logo="https://i.imgur.com/tSMtDlz.png" group-title="Live Channels",ATXN3 Austin
+https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(c55d1594-ad62-7434-aa17-4d71adb80f99)/index.m3u8
+#EXTINF:-1 tvg-id="KAAL61.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/27/WWAY_logo.png" group-title="Live Channels",ABC 6 Austin
+https://amg01942-amg01942c6-stirr-us-10178.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="KEYETV421.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CBS_logo_%282020%29.svg/960px-CBS_logo_%282020%29.svg.png" group-title="Live Channels",CBS 42 Austin
+https://linear-704.frequency.stream/dist/stirr/704/hls/master/playlist.m3u8
+#EXTINF:-1 tvg-id="FoxWeather.us" tvg-name="FOX Weather" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fox_Weather_logo.svg/1200px-Fox_Weather_logo.svg.png" group-title="Live Channels",FOX Weather
+https://247wlive.foxweather.com/stream/index.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",American Pickers 24/7
+https://jmp2.uk/plu-6408ae8f9b39550008caf94f.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Bonanza 24/7
+https://jmp2.uk/plu-696e647b07ea70192d49f6a5.m3u8
+#EXTINF:-1 tvg-id="WalkerTexasRanger.us@France" group-title="Live Channels",Walker Texas Ranger 24/7
+https://jmp2.uk/plu-635659445b4c4700076d2ad1.m3u8
+#EXTINF:-1 tvg-id="TrueCrimeNow.us@SD" group-title="Live Channels",True Crime 24/7
+https://jmp2.uk/plu-69dd5d9dceddf13a1a7e39c2.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Busted at the Border 24/7
+https://jmp2.uk/plu-62fb9c4539183b00076a3875.m3u8
+#EXTINF:-1 tvg-id="Cheers.us@Germany" group-title="Live Channels",Cheers 24/7
+https://jmp2.uk/plu-62bdb7f0db2eb30007376d4d.m3u8
+#EXTINF:-1 tvg-id="TopGear.uk@SD" group-title="Live Channels",Top Gear 24/7
+https://jmp2.uk/plu-638e10220aa6a6000726979f.m3u8
+#EXTINF:-1 tvg-id="ThePriceIsRight.us@HD" group-title="Live Channels",The Price is Right 24/7
+https://jmp2.uk/plu-64c2214c2a7f2200089a0c4b.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",The Dick Van Dyke Show 24/7
+https://jmp2.uk/plu-62e91384210bec0007ba714c.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",The Beverly Hillbillies 24/7
+https://jmp2.uk/plu-6565fefdc917a50008485cc6.m3u8
+#EXTINF:-1 tvg-id="TheAndyGriffithShow.us@SD" group-title="Live Channels",The Andy Griffith Show 24/7
+https://jmp2.uk/plu-62e9145ec07f2a00070e68dc.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Summer of Movies
+https://jmp2.uk/plu-6654adb1f99922000854388c.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",River Monsters 24/7
+https://jmp2.uk/plu-65367e914f123d000877d021.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Rawhide 24/7
+https://jmp2.uk/plu-65660223635c3c00086c2578.m3u8
+#EXTINF:-1 tvg-id="ComedyMovies.es@SD" group-title="Live Channels",Pluto TV Comedy Movies
+https://jmp2.uk/plu-62ea3d24b8e02600071fa296.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV 80's Action
+https://jmp2.uk/plu-66d717c6abec540008ba7eb5.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Action Movies
+https://jmp2.uk/plu-62ea3c2e4823db00072788ed.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Adventure
+https://jmp2.uk/plu-653bdb0fbdf3cf00089cc395.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCars.us@SD" group-title="Live Channels",Pluto TV Cars
+https://jmp2.uk/plu-69c592dff0f1a7d732dc6e36.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Classic TV Variety
+https://jmp2.uk/plu-68d25c623175a2780d051d3a.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Comedy
+https://jmp2.uk/plu-62e92178946c8000079a3160.m3u8
+#EXTINF:-1 tvg-id="ComedyMovies.es@SD" group-title="Live Channels",Pluto TV Comedy Movies
+https://jmp2.uk/plu-62ea3d24b8e02600071fa296.m3u8
+#EXTINF:-1 tvg-id="PlutoTVCrimeDrama.us@SD" group-title="Live Channels",Pluto TV Crime Drama
+https://jmp2.uk/plu-62e92708a7ce600007b2676a.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Drama Movies
+https://jmp2.uk/plu-62bdb0bcd707b9000739d2e5.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV FBI
+https://jmp2.uk/plu-693adae77f21340ef9746f56.m3u8
+#EXTINF:-1 tvg-id="PlutoTVHorror.us@CA" group-title="Live Channels",Pluto TV Horror
+https://jmp2.uk/plu-62ea3f8a38acc80007072d26.m3u8
+#EXTINF:-1 tvg-id="PlutoTVParanormal.us@US" group-title="Live Channels",Pluto TV Paranormal
+https://jmp2.uk/plu-62e92a58f3e4290007290c96.m3u8
+#EXTINF:-1 tvg-id="PlutoTVReality.us@US" group-title="Live Channels",Pluto TV Reality
+https://jmp2.uk/plu-67922858b83355184c699699.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Retro Action Movies
+https://jmp2.uk/plu-69a9ae4d3bd16a4ed04240d7.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Retro Crime Action
+https://jmp2.uk/plu-69aee8a1acb7eb0bb68df641.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Pluto TV Retro Crime Drama
+https://jmp2.uk/plu-630f1e6073bd1800082107f0.m3u8
+#EXTINF:-1 tvg-id="PlutoTVSciFi.us@US" group-title="Live Channels",Pluto TV Sci-fi
+https://jmp2.uk/plu-66166cb1307fa30008f275e7.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",America's Funniest Home Videos 24/7
+https://jmp2.uk/plu-69172f1699758a0f03459c5b.m3u8
+#EXTINF:-1 tvg-id="Cheers.us@Germany"group-title="Live Channels",Cheers 24/7
+https://jmp2.uk/plu-62bdb7f0db2eb30007376d4d.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Crime & Justice 24/7
+https://jmp2.uk/plu-6601948129adfd0008a1c0ba.m3u8
+#EXTINF:-1 tvg-id="DogtheBountyHunter.us@US" group-title="Live Channels",Dog The Bounty Hunter 24/7
+https://jmp2.uk/plu-6540fee72cf13100085d5a18.m3u8
+#EXTINF:-1 tvg-id="ForensicFiles.us@SD" group-title="Live Channels",Forensic Files 24/7
+https://jmp2.uk/plu-62e92392a3e6270007f562e8.m3u8
+#EXTINF:-1 tvg-id="GameShowCentral.us@SD" group-title="Live Channels",Game Show Central
+https://jmp2.uk/plu-62e90e8cb05d2b0007f10a61.m3u8
+#EXTINF:-1 tvg-id="Gunsmoke.us@SD" group-title="Live Channels",Gunsmoke 24/7
+https://jmp2.uk/plu-62e916affb29c60007211c8a.m3u8
+#EXTINF:-1 tvg-id="HappyDays.us@SD" group-title="Live Channels",Happy Days 24/7
+https://jmp2.uk/plu-62e917b5e354cf0007b97a67.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",History & Warfare
+https://jmp2.uk/plu-69dd5d7bfcb9bf5e3063cb16.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",I Love Lucy 24/7
+https://jmp2.uk/plu-63a2f1dda0d69700078b7cba.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",Modern Marvels 24/7
+https://jmp2.uk/plu-6540ff2d770cf1000866b90a.m3u8
+#EXTINF:-1 tvg-id="" group-title="Live Channels",More Pluto TV Comedy
+https://jmp2.uk/plu-62e91c3add66e00007eeb24c.m3u8
