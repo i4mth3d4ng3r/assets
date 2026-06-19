@@ -37,7 +37,7 @@ jobs:
           FANART_API_KEY: ${{ secrets.FANART_API_KEY }}
         run: |
           # 2. ADDED: --output-dir images forces the script to save there
-          python3 backdrop.py \
+          python3 scripts/backdrop.py \
             --api-key "$TMDB_API_KEY" \
             --fanart-key "$FANART_API_KEY" \
             --output-dir images \
