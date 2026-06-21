@@ -3,7 +3,7 @@
     {
       "groupId": "550e8400-e29b-41d4-a716-446655440000",
       "id": "29075787-3ab6-539d-aee4-2245d93f115a",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_4k.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_4k.png",
       "isEnabled": true,
       "name": "2160p",
       "pattern": "(?i)^(?!.*\\b(?:1080p?|720p?|full[ ._-]?hd|fhd)\\b)(?=.*(?:\\b2160p?\\b|(?<![a-z0-9])4k(?![a-z0-9])|\\buhd\\b|\\bultra[ ._-]?hd\\b))",
@@ -16,7 +16,7 @@
     {
       "groupId": "550e8400-e29b-41d4-a716-446655440000",
       "id": "0b6cb68b-9b86-5b7b-9d90-37222bde6d14",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_1080p.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_1080p.png",
       "isEnabled": true,
       "name": "1080p",
       "pattern": "(?i)(?:\\b1080p?\\b|\\bfhd\\b|\\bfull[ ._-]?hd\\b)",
@@ -29,7 +29,7 @@
     {
       "groupId": "550e8400-e29b-41d4-a716-446655440000",
       "id": "0d33e380-b632-566f-a57f-89ab9137313e",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_720p.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_720p.png",
       "isEnabled": true,
       "name": "720p",
       "pattern": "(?i)\\b720p?\\b",
@@ -42,7 +42,7 @@
     {
       "groupId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
       "id": "1f393f30-df1f-547e-97a7-b6b81404d8b5",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_HDR10Plus.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_HDR10Plus.png",
       "isEnabled": true,
       "name": "HDR10+",
       "pattern": "(?i)(?=.*(?:^|\\||[^a-z0-9])hdr\\s*10\\s*(?:\\+|plus|p)(?:\\||[^a-z0-9]|$)).*",
@@ -55,7 +55,7 @@
     {
       "groupId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
       "id": "c2d8eca4-de97-53e4-b151-418c8b88607d",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_HDR10.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_HDR10.png",
       "isEnabled": true,
       "name": "HDR10",
       "pattern": "(?i)(?!.*\\bhdr\\s*10\\s*(?:\\+|plus|p)(?:[^a-z0-9]|$))(?=.*(?:^|\\||[^a-z0-9])hdr\\s*10(?:\\||[^a-z0-9]|$)).*",
@@ -68,7 +68,7 @@
     {
       "groupId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
       "id": "81fcb635-5677-5e0b-85c9-77fd994d0091",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_HDR.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_HDR.png",
       "isEnabled": true,
       "name": "HDR",
       "pattern": "(?i)(?!.*\\bhdr\\s*10\\s*(?:\\+|plus|p)(?:[^a-z0-9]|$))(?!.*\\bhdr\\s*10(?:[^a-z0-9]|$))(?=.*(?:^|\\||[^a-z0-9])hdr(?:\\||[^a-z0-9]|$)).*",
@@ -81,7 +81,7 @@
     {
       "groupId": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
       "id": "9d1f158a-bb45-5758-b8da-b45c2759f803",
-      "imageURL": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/white%20regex%20tags/white_sdr.png",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/white%20regex%20tags/white_sdr.png",
       "isEnabled": false,
       "name": "SDR",
       "pattern": "(?i)^(?=.*(?:\\.(?:mkv|mp4|avi|mov|m4v|ts)\\b|\\b(?:x264|x265|xvid|h[ ._-]?264|h[ ._-]?265|hevc|avc|web[-_. ]?dl|webrip|blu[-_. ]?ray|bd[-_. ]?remux|bdremux|remux|bdrip|bdmux|dvd|dvdrip|hdtv|uhd|4k)\\b))(?!.*(?:^|[^A-Za-z0-9])(?:dovi|dv|dolby[ ._-]?vision|hdr10(?:\\+|plus|p)?|hdr[ ._-]?10[ ._-]?(?:\\+|plus|p)?|hdr|hlg)(?=$|[^A-Za-z0-9])).*$",
