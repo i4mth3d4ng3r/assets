@@ -20,7 +20,7 @@
       "pattern": "(?i)\\bDownload\\b",
       "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/uncached.png",
       "tagColor": "#00000000",
-      "borderColor": "#41b811",
+      "borderColor": "#cb2717",
       "textColor": "#00000000",
       "tagStyle": "filled and bordered",
       "isEnabled": true,
@@ -130,7 +130,7 @@
       "isEnabled": true,
       "type": "filter"
     },
-{
+    {
       "id": "remux",
       "groupId": "source",
       "name": "REMUX",
