@@ -237,13 +237,6 @@
   ],
   "groups": [
     {
-      "id": "source",
-      "name": "Source",
-      "color": "#00000000",
-      "borderColor": "#00000000",
-      "isExpanded": true
-    },
-    {
       "id": "resolution",
       "name": "Resolution",
       "color": "#00000000",
@@ -260,6 +253,13 @@
     {
       "id": "video-codec",
       "name": "Video Codec",
+      "color": "#00000000",
+      "borderColor": "#00000000",
+      "isExpanded": true
+    },
+    {
+      "id": "source",
+      "name": "Source",
       "color": "#00000000",
       "borderColor": "#00000000",
       "isExpanded": true
