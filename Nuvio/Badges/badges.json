@@ -108,7 +108,7 @@
       "id": "hdr",
       "groupId": "video-tech",
       "name": "HDR",
-      "pattern": "(?i)(?<!HDR10\\+\\|)\\bHDR\\b",
+      "pattern": "(?i)\\bhdr\\b",
       "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/hdr.png",
       "tagColor": "#00000000",
       "borderColor": "#00000000",
