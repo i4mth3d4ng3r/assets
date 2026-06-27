@@ -131,11 +131,11 @@
       "type": "filter"
     },
     {
-      "id": "remux",
+      "id": "blu-ray-disc",
       "groupId": "source",
-      "name": "REMUX",
-      "pattern": "(?i)•\\s*BluRay\\s*REMUX",
-      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/remux.png",
+      "name": "Blu-ray Disc",
+      "pattern": "(?i)•\\s*BluRay",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/blu_ray_disc.png",
       "tagColor": "#00000000",
       "borderColor": "#00000000",
       "textColor": "#00000000",
@@ -144,11 +144,11 @@
       "type": "filter"
     },
     {
-      "id": "blu-ray-disc",
+      "id": "remux",
       "groupId": "source",
-      "name": "Blu-ray Disc",
-      "pattern": "(?i)•\\s*BluRay",
-      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/blu_ray_disc.png",
+      "name": "REMUX",
+      "pattern": "(?i)•\\s*BluRay\\s*REMUX",
+      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/remux.png",
       "tagColor": "#00000000",
       "borderColor": "#00000000",
       "textColor": "#00000000",
