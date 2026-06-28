@@ -3,12 +3,12 @@
     {
       "id": "cached",
       "groupId": "cache",
-      "name": "Cached",
+      "name": "cached",
       "pattern": "(?i)⚡︎",
-      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/cached.png",
+      "imageURL": "",
       "tagColor": "#00000000",
       "borderColor": "#41b811",
-      "textColor": "#00000000",
+      "textColor": "#41b811",
       "tagStyle": "filled and bordered",
       "isEnabled": true,
       "type": "filter"
@@ -16,12 +16,12 @@
     {
       "id": "uncached",
       "groupId": "cache",
-      "name": "Uncached",
+      "name": "wait",
       "pattern": "(?i)ⴵ",
-      "imageURL": "https://raw.githubusercontent.com/i4mth3d4ng3r/assets/refs/heads/main/Nuvio/Badges/images/uncached.png",
+      "imageURL": "",
       "tagColor": "#00000000",
       "borderColor": "#cb2717",
-      "textColor": "#00000000",
+      "textColor": "#cb2717",
       "tagStyle": "filled and bordered",
       "isEnabled": true,
       "type": "filter"
