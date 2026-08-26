@@ -1,0 +1,127 @@
+name: Update AltStore Source JSON
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-source:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch releases and generate JSON
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          UPSTREAM_REPO="NuvioMedia/NuvioMobile"
+          MAX_VERSIONS=5
+          OUTPUT_FILE="NuvioMobile.json"
+          ICON_URL="https://raw.githubusercontent.com/${{ github.repository }}/main/icon.png"
+
+          echo "📡 Fetching releases from $UPSTREAM_REPO..."
+
+          # Fetch recent releases via GitHub API (non-draft, non-prerelease)
+          RELEASES_JSON=$(gh api "repos/${UPSTREAM_REPO}/releases?per_page=20" \
+            --jq '[.[] | select(.draft == false and .prerelease == false)]')
+
+          # Build the versions array by extracting IPA assets
+          VERSIONS_JSON=$(echo "$RELEASES_JSON" | jq -c --argjson max "$MAX_VERSIONS" '
+            [.[] |
+              # Find IPA assets in this release
+              . as $release |
+              .assets[] |
+              select(.name | test("\\.ipa$"; "i")) |
+              {
+                version: $release.tag_name,
+                date: $release.published_at,
+                localizedDescription: ($release.body // "No release notes available."),
+                downloadURL: .browser_download_url,
+                size: .size,
+                minOSVersion: "16.1"
+              }
+            ] | .[:$max]
+          ')
+
+          VERSION_COUNT=$(echo "$VERSIONS_JSON" | jq 'length')
+          echo "✅ Found $VERSION_COUNT IPA version(s)"
+
+          if [ "$VERSION_COUNT" -eq 0 ]; then
+            echo "⚠️ No IPA assets found in any release. Skipping update."
+            exit 0
+          fi
+
+          # Get the latest version for the top-level app metadata
+          LATEST_VERSION=$(echo "$VERSIONS_JSON" | jq -r '.[0].version')
+          echo "📦 Latest version: $LATEST_VERSION"
+
+          # Construct the full AltStore/SideStore source JSON
+          jq -n \
+            --arg name "Nuvio Mobile" \
+            --arg subtitle "Official Nuvio Mobile builds for AltStore and SideStore." \
+            --arg description "Automatically updated source that tracks official Nuvio Mobile releases." \
+            --arg website "https://github.com/${UPSTREAM_REPO}" \
+            --arg iconURL "$ICON_URL" \
+            --arg tintColor "7B2FF7" \
+            --arg bundleId "com.nuvio.media" \
+            --arg devName "NuvioMedia" \
+            --arg appSubtitle "Watch your library, anywhere" \
+            --arg localDesc "Official Nuvio Mobile app for iOS and iPadOS." \
+            --arg category "entertainment" \
+            --argjson versions "$VERSIONS_JSON" \
+            '{
+              name: $name,
+              subtitle: $subtitle,
+              description: $description,
+              website: $website,
+              iconURL: $iconURL,
+              tintColor: $tintColor,
+              news: [],
+              apps: [
+                {
+                  name: $name,
+                  bundleIdentifier: $bundleId,
+                  developerName: $devName,
+                  subtitle: $appSubtitle,
+                  localizedDescription: $localDesc,
+                  iconURL: $iconURL,
+                  tintColor: $tintColor,
+                  category: $category,
+                  versions: $versions
+                }
+              ]
+            }' > "$OUTPUT_FILE"
+
+          echo "📝 Generated $OUTPUT_FILE"
+          cat "$OUTPUT_FILE" | jq '.apps[0].versions | length' | xargs -I{} echo "   Contains {} version(s)"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet NuvioMobile.json 2>/dev/null; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "ℹ️ No changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "🔄 Changes detected!"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add NuvioMobile.json
+          LATEST=$(jq -r '.apps[0].versions[0].version' NuvioMobile.json)
+          git commit -m "Update source JSON — v${LATEST}"
+          git push
+
